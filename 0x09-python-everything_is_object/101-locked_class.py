@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""This defines a locked class"""
+
 
 class LockedClass:
-    def __setattr__(self, name, value):
-        if name == 'first_name':
-            self.__dict__[name] = value
-        else:
-            raise AttributeError(f"'LockedClass' object has no attribute '{name}'")
+    """
+    Only allows instatiation of an attribute called first_name
+    """
+
+    __slots__ = ["first_name"]
