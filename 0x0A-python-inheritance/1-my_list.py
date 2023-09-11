@@ -1,9 +1,15 @@
-class MyList(list):
-    def print_sorted(self):
-        """
-        Print the list in sorted order (ascending).
+#!/usr/bin/python3
+"""
+contains the MyList class
+"""
 
-        Assumes that all elements of the list are of type int.
-        """
-        sorted_list = sorted(self)
-        print(sorted_list)
+
+class MyList(list):
+    """a subclass of list"""
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
+    def print_sorted(self):
+        """prints the sorted list"""
+        print(sorted(self))
