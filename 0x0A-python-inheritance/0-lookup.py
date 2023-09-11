@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 
+"""Defines an object attribute lookup function."""
+
+
 def lookup(obj):
-    """
-    This function returns a list of available methods of an object.
-
-    Args:
-        obj (object): The object for which to retrieve attributes and methods.
-
-    Returns:
-        list: A list containing the names of available attributes and methods.
-    """
-    return [attr for attr in dir(obj) if not callable(getattr(obj, attr))]
+    """Return a list of an object's available attributes."""
+    return (dir(obj))
