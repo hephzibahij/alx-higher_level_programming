@@ -6,7 +6,7 @@ const arg = process.argv[2];
 const numOccurrences = parseInt(arg);
 
 // Checking if the conversion was successful and printing the result
-if (isNaN(numOccurrences)) {
+if (!isNaN(numOccurrences)) {
     console.log('Missing number of occurrences');
 } else {
     // Loop to print "C is fun" x times
