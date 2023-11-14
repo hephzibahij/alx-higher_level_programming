@@ -1,8 +1,7 @@
 #!/usr/bin/node
-// Array of strings
-const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-
-// Loop to print each line
-for (let i = 0; i < languages.length; i++) {
-    console.log(languages[i]);
+// Array of string
+const lines = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+// loop to print each lines
+for (let i = 0; i < lines.length; i++) {
+  console.log(lines[i]);
 }
