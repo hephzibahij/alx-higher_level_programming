@@ -6,4 +6,4 @@ const arg = process.argv[2];
 const intValue = parseInt(arg);
 
 // Checking if the conversion was successful and printing the result
-console.log(isNaN(intValue) ? "Not a number" : `My number: ${intValue}`);
+console.log(isNaN(intValue) ? 'Not a number' : `My number: ${intValue}`);
