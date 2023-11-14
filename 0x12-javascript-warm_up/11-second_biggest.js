@@ -1,18 +1,19 @@
 #!/usr/bin/node
 // Define the function findSecondBiggest with variable number of arguments
-const findSecondBiggest = (...args) => {
-  // Convert all arguments to integers
-  const integers = args.map(Number);
+// Convert all arguments to integers
+// If no argument passed or only one argument, print 0
+// Sort the array of integers in descending order
+// Find and print the second biggest integer
+function SecondBiggest (args) {
+  const integers = args.map(Number).filter(Number.isInteger);
 
-  // If no argument passed or only one argument, print 0
-  if (integers.length <= 1) {
+  if (integers.length < 2) {
     console.log(0);
-    return;
+  } else {
+    const sortedIntegers = integers.sort((a, b) => b - a);
+    console.log(sortedIntegers[1]);
   }
-
-  // Sort the array of integers in descending order
-  const sortedIntegers = integers.sort((a, b) => b - a);
-
-  // Find and print the second biggest integer
-  console.log("The second biggest integer is:", sortedIntegers[1]);
 }
+
+const argumentsList = process.argv.slice(2);
+SecondBiggest(argumentsList);
